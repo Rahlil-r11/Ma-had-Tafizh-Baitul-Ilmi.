@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sekolah Ma'had Baitul Ilmi</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --bg: #1c1c1c;
+      --abu: #2e2e2e;
+      --abu-muda: #444;
+      --putih: #f0f0f0;
+      --hover: #555;
+      --accent: #888;
+      --trans: all 0.5s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--putih);
+      animation: fadeIn 1s ease;
+    }
+
+    header {
+      background: var(--abu);
+      padding: 50px 20px;
+      text-align: center;
+      animation: slideDown 1s ease;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: var(--accent);
+    }
+
+    nav {
+      background: var(--abu-muda);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    nav a {
+      color: var(--putih);
+      padding: 15px 20px;
+      text-decoration: none;
+      transition: var(--trans);
+    }
+
+    nav a:hover {
+      background: var(--hover);
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 60px 30px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeInUp 1s ease;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      border-left: 5px solid var(--accent);
+      padding-left: 15px;
+      animation: expandLine 1s ease;
+    }
+
+    p, li {
+      margin-bottom: 15px;
+      color: #ddd;
+      line-height: 1.6em;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .program, .berita {
+      background: var(--abu);
+      padding: 20px;
+      border-radius: 10px;
+      transition: var(--trans);
+    }
+
+    .program:hover, .berita:hover {
+      transform: scale(1.02);
+      background: var(--hover);
+    }
+
+    .galeri {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .galeri img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      filter: grayscale(50%);
+      transition: var(--trans);
+    }
+
+    .galeri img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    form {
+      background: #2b2b2b;
+      padding: 30px;
+      border-radius: 10px;
+      animation: fadeInUp 1s ease;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: none;
+      border-radius: 6px;
+      background: #444;
+      color: white;
+      font-size: 1rem;
+      transition: var(--trans);
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      background: #555;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--trans);
+    }
+
+    button:hover {
+      background: white;
+      color: #000;
+    }
+
+    footer {
+      background: var(--abu-muda);
+      color: var(--accent);
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--accent);
+      color: white;
+      font-size: 24px;
+      padding: 12px 16px;
+      border-radius: 50%;
+      text-decoration: none;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--trans);
+      z-index: 999;
+    }
+
+    #backToTop.show {
+      opacity: 0.8;
+      pointer-events: auto;
+    }
+
+    #backToTop:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-60px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes expandLine {
+      from { width: 0; }
+      to { width: 50px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sekolah Ma'had Baitul Ilmi</h1>
+    <p>Mencetak Generasi Penghafal Al-Qur'an</p>
+  </header>
+
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#visi">Visi & Misi</a>
+    <a href="#program">Program</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#berita">Berita</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="beranda">
+    <h2>Selamat Datang</h2>
+    <p>Sekolah ini berisi para penghafal Al-Qur'an dan juga berbasis olahraga Baseball. Dilengkapi dengan asrama untuk akhwat dan ikhwan.</p>
+  </section>
+
+  <section id="visi">
+    <h2>Visi & Misi</h2>
+    <p><strong>Visi:</strong> Mewujudkan Generasi Qur'ani yang beradab Islami dan sehat jasmani serta rohani.</p>
+    <p><strong>Misi:</strong></p>
+    <ul>
+      <li>Mendidik generasi penghafal Al-Qur’an yang berakhlakul karimah.</li>
+      <li>Memahami isi Al-Qur’an, bukan hanya menghafal.</li>
+      <li>Bekal ilmu syar’i untuk kehidupan.</li>
+      <li>Sinergi dan frekuensi pola pikir islami.</li>
+    </ul>
+  </section>
+
+  <section id="program">
+    <h2>Program Unggulan</h2>
+    <div class="grid-2">
+      <div class="program">
+        <ul>
+          <li>Tahfizh Al-Qur'an</li>
+          <li>Tahsin Metode Usmani</li>
+          <li>Olahraga Baseball & Softball</li>
+          <li>Muhadoroh</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<section id="galeri">
+    <h2>Galeri</h2>
+    <div class="galeri">
+      <img src="./image copy.png" alt="Galeri 1">
+      <img src="./image.png" alt="Galeri 2">
+      <img src="./image copy 2.png" alt="Galeri 3">
+      <img src="./image copy 3.png" alt="Galeri 4">
+      <img src="./image copy 4.png" alt="Galeri 5">
+      <img src="./image copy 5.png" alt="Galeri 6">
+      <img src="./image copy 6.png" alt="Galeri 6">
+      <img src="./image copy 7.png" alt="Galeri 6">
+    </div>
+  </section>
+
+
+  <section id="berita">
+    <h2>Berita Terbaru</h2>
+    <div class="grid-2">
+      <div class="berita">
+        <h3>Juara Turnamen Baseball</h3>
+        <p>Santri menjuarai kompetisi nasional tingkat minor dan major!</p>
+      </div>
+      <div class="berita">
+        <h3>Kelas Komputer dan Bahasa Inggris</h3>
+        <p>Program baru berbasis digital dan global communication segera hadir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Hubungi Kami</h2>
+    <form id="formKontak">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="pesan">Pesan:</label>
+      <textarea id="pesan" rows="5" required></textarea>
+
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sekolah Ma'had Baitul Ilmi. All rights reserved.</p>
+  </footer>
+
+  <a href="#beranda" id="backToTop" title="Kembali ke atas">&#8679;</a>
+
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+
+    document.getElementById("formKontak").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const pesan = document.getElementById("pesan").value;
+
+      alert(`Terima kasih, ${nama}! Pesan kamu terkirim:\n\n"${pesan}"\n\nKami akan hubungi kamu di ${email}.`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
